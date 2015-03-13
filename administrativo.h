@@ -8,6 +8,7 @@ class Administrativo:public Personas{
 public:
 
 	Administrativo(string, string);
+	Administrativo(const Administrativo&);
 	string getClave();
 	string getPuesto();
 	void setClave(string);

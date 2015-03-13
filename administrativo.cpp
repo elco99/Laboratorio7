@@ -7,6 +7,9 @@ Administrativo::Administrativo(string clave, string puesto):Personas(nombre ,use
 	this->clave = clave;
 	this->puesto = puesto;
 }
+Administrativo::Administrativo(const Administrativo& other):Personas(other){
+
+}
 string Administrativo::getClave(){
 	return clave;
 }
