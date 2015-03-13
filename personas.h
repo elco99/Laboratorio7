@@ -5,8 +5,8 @@ using std::string;
 
 class Personas{
 	//nombre real, nombre de usuario, contraseña, edad, cédula de identidad y fecha de nacimiento
-protected: 
-	
+protected: baqu
+
 	string nombre;
 	string user;
 	string password;

@@ -14,5 +14,12 @@ public:
 	string getLugar()const;
 	string getHuellas()const;
 	string getProsecado()const;	
+
+	void setNombre(string);
+	void setTipoObjeto(string);
+	void setLugar(string);
+	void setHuellas(string);
+	void setProsecado(string);	
+
 	string toString()const;
 };

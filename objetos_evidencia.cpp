@@ -33,6 +33,26 @@ string Objetos_Evidencia::getProsecado()const{
 	return procesado;
 }
 
+
+
+void setNombre(string nombre){
+	this->nombre = nombre;
+}
+void setTipoObjeto(string tipo_objeto){	
+	this->tipo_objeto = tipo_objeto;
+}
+void setLugar(string lugar){	
+	this->lugar = lugar;
+}
+
+void setHuellas(string huellas){	
+	this->huellas = huellas;
+}
+void setProsecado(string procesado){	
+	this->procesado = procesado;
+}
+
+
 string Objetos_Evidencia::toString()const{
 	stringstream ss;
 	ss << "Nombre del objeto: " << nombre << " " << " Tipo de objeto: " << tipo_objeto << " Lugar de hallazgo: " << lugar 
