@@ -35,20 +35,20 @@ string Objetos_Evidencia::getProsecado()const{
 
 
 
-void setNombre(string nombre){
+void Objetos_Evidencia::setNombre(string nombre){
 	this->nombre = nombre;
 }
-void setTipoObjeto(string tipo_objeto){	
+void Objetos_Evidencia::setTipoObjeto(string tipo_objeto){	
 	this->tipo_objeto = tipo_objeto;
 }
-void setLugar(string lugar){	
+void Objetos_Evidencia::setLugar(string lugar){	
 	this->lugar = lugar;
 }
 
-void setHuellas(string huellas){	
+void Objetos_Evidencia::setHuellas(string huellas){	
 	this->huellas = huellas;
 }
-void setProsecado(string procesado){	
+void Objetos_Evidencia::setProsecado(string procesado){	
 	this->procesado = procesado;
 }
 
