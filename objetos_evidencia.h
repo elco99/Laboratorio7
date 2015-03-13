@@ -13,6 +13,6 @@ public:
 	string getTipoObjeto()const;
 	string getLugar()const;
 	string getHuellas()const;
-	string getProsecado())const;	
+	string getProsecado()const;	
 	string toString()const;
 };
