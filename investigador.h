@@ -17,4 +17,4 @@ public:
 	void setCerrados(int);
 	void setSinResolver(int);
 	string toString();
-}
+};
