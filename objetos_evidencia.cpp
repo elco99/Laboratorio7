@@ -29,7 +29,7 @@ string Objetos_Evidencia::getHuellas()const{
 	return huellas;
 }
 
-string Objetos_Evidencia::getProsecado())const{
+string Objetos_Evidencia::getProsecado()const{
 	return procesado;
 }
 

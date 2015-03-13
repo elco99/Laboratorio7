@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+using std::string;
+
 class Personas{
 	//nombre real, nombre de usuario, contraseña, edad, cédula de identidad y fecha de nacimiento
 	string nombre;
@@ -22,7 +24,7 @@ public:
 	int getEdad();
 	void setEdad(int);
 	string getID();
-	void setID();
-	string getNacimiento(string);
+	void setID(string);
+	string getNacimiento();
 	void setNacimiento(string);
 };
