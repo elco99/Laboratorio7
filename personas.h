@@ -5,6 +5,8 @@ using std::string;
 
 class Personas{
 	//nombre real, nombre de usuario, contraseña, edad, cédula de identidad y fecha de nacimiento
+protected: 
+	
 	string nombre;
 	string user;
 	string password;
@@ -27,4 +29,5 @@ public:
 	void setID(string);
 	string getNacimiento();
 	void setNacimiento(string);
+
 };
