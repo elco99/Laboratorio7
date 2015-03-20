@@ -55,5 +55,6 @@ string Homicidio::toString()const{
 	}else{
 		ss << endl << "Sospechoso Principal: "<< sospechoso_principal<< ", Culpable: "<< "desconocido" << ", Victima: "<<victima; 
 	}
+	return ss.str();
 	
 }
