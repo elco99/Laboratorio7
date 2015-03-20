@@ -1,15 +1,17 @@
 #pragma once
 #include <string>
 #include "personas.h"
+#include <vector>
+#include "objetos_evidencia.h"
 
-using std::string;
+using namespace std;
 
 class Investigador:public Personas{
 	int casos;
 	int casos_cerrados;
 	int casos_sin_resolver;
 public:
-	Investigador(int,int,int);
+	Investigador(string,string,string,int,string,string,int,int,int);
 	Investigador(const Investigador&);
 	int getCasos();
 	int getCerrados();
@@ -17,5 +19,5 @@ public:
 	void setCasos(int);
 	void setCerrados(int);
 	void setSinResolver(int);
-	string toString();
+	virtual string toString(vector<Objetos_Evidencia>& )const;
 };
