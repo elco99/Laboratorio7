@@ -1,12 +1,15 @@
-#include <string>
+
 #include "forense.h"
-#include "personas.h"
+
 #include <sstream>
 
-using std::string;
-using std::stringstream;
 
-Forense::Forense(string fecha_ingreso, string horario_trabajo):Personas(nombre, user, password, edad, id, nacimiento){
+
+
+//using namespace std;
+
+Forense::Forense(string nombre ,string user, string password,int edad, string id, string nacimiento,string fecha_ingreso, string horario_trabajo)
+				:Personas(nombre, user, password, edad, id, nacimiento){
 	this->fecha_ingreso = fecha_ingreso;
 	this->horario_trabajo = horario_trabajo;
 }
@@ -27,8 +30,12 @@ void Forense::setHorario(string){
 	this->horario_trabajo;
 }
 
-string Forense::toString(){
+string Forense::toString(vector<Homicidio>& homicidio)const{
 	stringstream ss;
-	ss << "Fecha de Ingreso: " << fecha_ingreso << " Horario de trabajo: " << horario_trabajo << Personas::toString();
+
+	for(int i = 0; i < homicidio.size(); i++){
+		ss << "Homicidio " << i+1 << ") " << homicidio[i].toString() << endl;
+	 }
+	
 	return ss.str();
 }
