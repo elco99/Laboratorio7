@@ -16,7 +16,7 @@ protected:
 	string fecha_incidente;
 	bool abierto;
 public:
-	Casos(string,vector<Investigador>,vector<Objetos_Evidencia>,string,string,bool);
+	Casos(string, vector<Investigador> ,vector<Objetos_Evidencia>, string, string, bool);
 	Casos(const Casos&);
 	string getNumCaso();
 	void setNumCaso(string);

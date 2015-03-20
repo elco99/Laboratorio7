@@ -1,8 +1,11 @@
 #include <string>
 #include <vector>
+#include <sstream>
 #include "objetos_evidencia.h"
 #include "investigador.h"
 #include "casos.h"
+
+using namespace std;
 
 Casos::Casos(string num_caso,vector<Investigador> lista,vector<Objetos_Evidencia> lista2,string hora_incidente,string fecha_incidente,bool abierto){
 	this->num_caso = num_caso;
