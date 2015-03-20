@@ -1,17 +1,20 @@
 #pragma once
 #include <string>
 #include "personas.h"
+#include "casos.h"
+#include <vector>
+#include "secuestro.h"
 
-using std::string;
+using namespace std;
 class Administrativo:public Personas{
 	string clave, puesto;
 public:
 
-	Administrativo(string, string);
+	Administrativo(string,string,string,int,string,string,string, string);
 	Administrativo(const Administrativo&);
 	string getClave();
 	string getPuesto();
 	void setClave(string);
 	void setPuesto(string);
-	string toString();
+	virtual string toString(vector<Secuestro>&)const;
 };
