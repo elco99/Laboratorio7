@@ -1,10 +1,17 @@
 #include <string>
 #include "administrativo.h"
+#include "objetos_evidencia.h"
 #include "personas.h"
+#include "casos.h"
 #include "homicidio.h"
+#include <sstream>
 #include <vector>
 
-Homicidio::Homicidio(string sospechoso_principal, vector <string> sospechosos,string victima, string culpable):Casos(num_caso, lista,lista2,hora_incidente,fecha_incidente,abierto){
+using std::stringstream;
+using std::string;
+
+Homicidio::Homicidio(string num_caso,vector<Investigador> lista,vector<Objetos_Evidencia> lista2,string hora_incidente,string fecha_incidente,bool abierto, vector<string> sospechosos, string sospechoso_principal, string victima, string culpable)
+					:Casos(num_caso, lista,lista2,hora_incidente,fecha_incidente,abierto){
 	this->sospechosos = sospechosos;
 	this->sospechoso_principal = sospechoso_principal;
 	this->victima = victima;
@@ -24,7 +31,6 @@ vector<string> Homicidio::getSospechosos(){
 	return sospechosos;
 }
 
-
 void Homicidio::setCulpable(string culpable){
 	this->culpable = culpable;
 }
@@ -34,6 +40,20 @@ void Homicidio::setVictima(string victima){
 void Homicidio::setSospechoso_Principal(string sospechoso_principal){	
 	this->sospechoso_principal = sospechoso_principal;
 }
-void Homicidio::setSospechosos(vector <string> sospechosos){
+void Homicidio::setSospechosos(vector<string> sospechosos){
 	this->sospechosos = sospechosos;
+}
+
+string Homicidio::toString()const{
+	stringstream ss;
+	ss << "Sospechosos: ";
+	for(int i = 0;i < sospechosos.size();i++){
+		ss << sospechosos[i]<< ", ";
+	}
+	if(!abierto){
+		ss << endl << "Sospechoso Principal: "<< sospechoso_principal<< ", Culpable: "<< culpable << ", Victima: "<<victima; 
+	}else{
+		ss << endl << "Sospechoso Principal: "<< sospechoso_principal<< ", Culpable: "<< "desconocido" << ", Victima: "<<victima; 
+	}
+	
 }
