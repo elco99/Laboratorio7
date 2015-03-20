@@ -12,7 +12,7 @@ class Secuestro:public Casos{
 	double cantidad;
 	bool estado_victima;
 public:
-	Secuestro(string, string, bool, double, bool);
+	Secuestro(string, string, bool, double, bool,string, vector<Investigador> ,vector<Objetos_Evidencia>, string, string, bool);
 	string getVictima();
 	string getLugarSecuestro();
 	bool getRescate();

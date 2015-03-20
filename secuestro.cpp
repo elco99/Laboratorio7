@@ -6,8 +6,10 @@
 using std::string;
 using std::stringstream;
 
-Secuestro::Secuestro(string victima, string lugar_secuestro, bool pide_rescate, double cantidad, bool estado_victima)
-		 :Casos(num_caso, lista,lista2,hora_incidente,fecha_incidente,abierto){
+Secuestro::Secuestro(string victima, string lugar_secuestro, bool pide_rescate,
+ 					double cantidad, bool estado_victima,string num_caso,vector<Investigador> lista,
+ 					vector<Objetos_Evidencia> lista2,string hora_incidente,string fecha_incidente,bool abierto)
+		 			:Casos(num_caso, lista,lista2,hora_incidente,fecha_incidente,abierto){
 	this->victima = victima;
 	this->lugar_secuestro = lugar_secuestro;
 	this->pide_rescate = pide_rescate;
@@ -56,5 +58,7 @@ void Secuestro::setEstadoVictima(bool estado_victima){
 }
 
 string Secuestro::toString(){
-
+	stringstream ss;
+	ss << "Victima: "<< getVictima() << ", Lugar: "<< getLugarSecuestro()<< ", Rescate: "<< getRescate() << ", Cantidad: "<<getCantidad()<<", Abierto: "<< Casos::getAbierto()<<", Estado: "<<getEstadoVictima();
+	return ss.str();
 }
