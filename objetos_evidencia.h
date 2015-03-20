@@ -8,7 +8,7 @@ using std::stringstream;
 class Objetos_Evidencia{
 	string nombre, tipo_objeto, lugar, huellas, procesado;
 public:
-	Objetos_Evidencia(string, string, string, string, string);
+	Objetos_Evidencia(string,string,string,string,string);
 	string getNombre()const;
 	string getTipoObjeto()const;
 	string getLugar()const;
@@ -20,6 +20,5 @@ public:
 	void setLugar(string);
 	void setHuellas(string);
 	void setProsecado(string);	
-
 	string toString()const;
 };
